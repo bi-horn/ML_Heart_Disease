@@ -52,20 +52,26 @@ Only chosen models like KNN, RF and XGBoost were tested:
 
 ## Model Performance Metrics
 
-```python
-from prettytable import PrettyTable
+# Recall
+table_content = [
+    ["Sl. No.", "Classification Model", "Train Accuracy (%)", "Test Accuracy (%)"],
+    ["1", "K Nearest Neighbors", f"{knn_train_accuracy*100:.2f}", f"{knn_test_accuracy*100:.2f}"],
+    ["2", "Random Forests", f"{rf_train_accuracy*100:.2f}", f"{rf_test_accuracy*100:.2f}"],
+    ["3", "XG Boost", f"{xgb_train_accuracy*100:.2f}", f"{xgb_test_accuracy*100:.2f}"]
+]
 
-# Create the table
-test = PrettyTable(['Sl. No.','Classification Model', 'Train Accuracy (%)','Test Accuracy (%)'])
-test.add_row(['1','K Nearest Neighbors',knn_train_accuracy*100,knn_test_accuracy*100])
-test.add_row(['2','Random Forests',rf_train_accuracy*100,rf_test_accuracy*100])
-test.add_row(['3','XG Boost',xgb_train_accuracy*100,xgb_test_accuracy*100])
+# Calculate the maximum width of each column
+max_widths = [max(len(str(row[i])) for row in table_content) for i in range(len(table_content[0]))]
 
-# Convert the table to a Markdown-formatted string
-markdown_table = test.get_string()
+# Generate the Markdown table
+markdown_table = "\n".join([" | ".join(cell.ljust(max_widths[i]) for i, cell in enumerate(row)) for row in table_content])
+
+# Add Markdown table headers
+markdown_table = markdown_table + "\n" + "|".join(["-" * width for width in max_widths])
 
 # Print the Markdown table
 print(markdown_table)
+
 
 
 
