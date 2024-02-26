@@ -46,31 +46,26 @@ Approach:
     Implement different ML approches (KNN, Random Forest, ..) and compare recall, accuracy and loss 
     
 
-Results:
+## Results:
 
 Only chosen models like KNN, RF and XGBoost were tested:
 
-## Model Performance Metrics
+#### Model Performance Metrics
++---------+----------------------+-------------------+-------------------+
+| Sl. No. | Classification Model |  Train Recall (%) |  Test Recall (%)  |
++---------+----------------------+-------------------+-------------------+
+|    1    | K Nearest Neighbors  | 84.88314271506712 | 75.16778523489933 |
+|    2    |    Random Forests    | 70.11437095972153 | 74.49664429530202 |
+|    3    |       XG Boost       | 80.10939830929885 | 87.24832214765101 |
++---------+----------------------+-------------------+-------------------+
 
-# Recall
-table_content = [
-    ["Sl. No.", "Classification Model", "Train Accuracy (%)", "Test Accuracy (%)"],
-    ["1", "K Nearest Neighbors", f"{knn_train_accuracy*100:.2f}", f"{knn_test_accuracy*100:.2f}"],
-    ["2", "Random Forests", f"{rf_train_accuracy*100:.2f}", f"{rf_test_accuracy*100:.2f}"],
-    ["3", "XG Boost", f"{xgb_train_accuracy*100:.2f}", f"{xgb_test_accuracy*100:.2f}"]
-]
-
-# Calculate the maximum width of each column
-max_widths = [max(len(str(row[i])) for row in table_content) for i in range(len(table_content[0]))]
-
-# Generate the Markdown table
-markdown_table = "\n".join([" | ".join(cell.ljust(max_widths[i]) for i, cell in enumerate(row)) for row in table_content])
-
-# Add Markdown table headers
-markdown_table = markdown_table + "\n" + "|".join(["-" * width for width in max_widths])
-
-# Print the Markdown table
-print(markdown_table)
++---------+----------------------+--------------------+--------------------+
+| Sl. No. | Classification Model | Train Accuracy (%) | Test Accuracy (%)  |
++---------+----------------------+--------------------+--------------------+
+|    1    | K Nearest Neighbors  | 71.25808055693685  | 52.99901671583087  |
+|    2    |    Random Forests    | 67.70263550472401  | 58.603736479842674 |
+|    3    |       XG Boost       | 77.17553455992044  | 40.41297935103245  |
++---------+----------------------+--------------------+--------------------+
 
 
 
