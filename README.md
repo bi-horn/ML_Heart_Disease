@@ -43,7 +43,7 @@ Approach:
 
     Data Preparation: Removed null values
     Balance the dataset using SMOTE 
-    Implement different ML approches (KNN, Random Forest, ..) and compare recall, accuracy and loss 
+    Implement different ML approches (KNN, Random Forest, XGBoost) and compare recall, accuracy and loss 
     
 
 ## Results:
