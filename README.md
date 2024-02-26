@@ -51,11 +51,18 @@ Approach:
 Only chosen models like KNN, RF and XGBoost were tested:
 
 #### Model Performance Metrics
-| Sl. No. | Classification Model  | Train Accuracy (%) | Test Accuracy (%) |
-| ------- | ---------------------- | ------------------- | ----------------- |
-| 1       | K Nearest Neighbors    | 85.34               | 82.57             |
-| 2       | Random Forests         | 92.15               | 90.23             |
-| 3       | XG Boost               | 88.76               | 86.45             |
+|         | Classification Model | Train Recall (%) | Test Recall (%) |
+| ------- | -------------------- | ----------------- | --------------- |
+|    1    | K Nearest Neighbors  | 84.88            | 75.17           |
+|    2    | Random Forests       | 70.11            | 74.50           |
+|    3    | XG Boost             | 80.11            | 87.25           |
+
+
+|         | Classification Model | Train Accuracy (%) | Test Accuracy (%) |
+| ------- | --------------------- | ------------------ | ----------------- |
+|    1    | K Nearest Neighbors  | 71.26              | 53.00             |
+|    2    | Random Forests       | 67.70              | 58.60             |
+|    3    | XG Boost             | 77.18              | 40.41             |
 
 
 
