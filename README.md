@@ -64,6 +64,13 @@ Only chosen models like KNN, RF and XGBoost were tested:
 |    2    | Random Forests       | 67.70              | 58.60             |
 |    3    | XG Boost             | 77.18              | 40.41             |
 
+A high recall value is important as it signifies the ability to accurately identify individuals at risk of coronary heart disease (CHD) with a high true positive rate, thereby enabling timely warnings and interventions.
+However, it would be desirable to improve accuracy as well and achieve a lower false positive rate.
+
+
+## Further Investigations: Attempts to Improve Accuracy
+
+Analysis will be continued with neural networks to try to improve the accuracy using neural networks.
 
 
 
