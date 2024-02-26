@@ -46,4 +46,24 @@ Approach:
     Implement different ML approches (KNN, Random Forest, ..) and compare recall, accuracy and loss 
     
 
-Conclusion:
+Results:
+
+Only chosen models like KNN, RF and XGBoost were tested:
+
+## Model Performance Metrics
+
+```python
+from prettytable import PrettyTable
+
+test = PrettyTable(['Sl. No.','Classification Model', 'Train Recall (%)','Test Recall (%)'])
+test.add_row(['1','K Nearest Neighbors',knn_train_recall*100,knn_test_recall*100])
+test.add_row(['2','Random Forests',rf_train_recall*100,rf_test_recall*100])
+test.add_row(['3','XG Boost',xgb_train_recall*100,xgb_test_recall*100])
+print(test)
+
+test = PrettyTable(['Sl. No.','Classification Model', 'Train Accuracy (%)','Test Accuracy (%)'])
+test.add_row(['1','K Nearest Neighbors',knn_train_accuracy*100,knn_test_accuracy*100])
+test.add_row(['2','Random Forests',rf_train_accuracy*100,rf_test_accuracy*100])
+test.add_row(['3','XG Boost',xgb_train_accuracy*100,xgb_test_accuracy*100])
+print(test)
+
